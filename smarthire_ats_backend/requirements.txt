@@ -1,0 +1,11 @@
+fastapi
+python-multipart
+email-validator
+uvicorn
+sqlalchemy
+mysql-connector-python>=8.0.0
+spacy
+bcrypt>=4.0.1
+python-jose[cryptography]
+python-dotenv
+pdfplumber

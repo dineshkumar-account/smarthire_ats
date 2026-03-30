@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+.env
+smarthire_ats_backend/smarthire_ats.db
