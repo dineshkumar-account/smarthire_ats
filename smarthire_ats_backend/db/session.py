@@ -1,10 +1,7 @@
 import os
 
-from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
-load_dotenv()
 
 # Driver: mysql-connector-python → SQLAlchemy URL scheme mysql+mysqlconnector://
 # https://docs.sqlalchemy.org/en/20/dialects/mysql.html#mysqlconnector
