@@ -8,10 +8,12 @@ load_dotenv()
 
 # Driver: mysql-connector-python → SQLAlchemy URL scheme mysql+mysqlconnector://
 # https://docs.sqlalchemy.org/en/20/dialects/mysql.html#mysqlconnector
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "mysql+mysqlconnector://user:password@127.0.0.1:3306/smarthire_ats?charset=utf8mb4",
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    raise RuntimeError(
+        "DATABASE_URL environment variable is not set. "
+        "Ensure the Railway MySQL service is linked and DATABASE_URL is configured."
+    )
 
 engine = create_engine(
     DATABASE_URL,
